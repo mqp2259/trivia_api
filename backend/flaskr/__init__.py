@@ -197,27 +197,30 @@ def create_app(test_config=None):
       Try using the word "title" to start. 
       '''
       # questions
-      enue_list = Venue.query.filter(Venue.name.ilike("%" + request.form.get("search_term", "") + "%")).all()
-      selection = Question.query.order_by(Question.id).all()
-      total_questions = len(selection)
-      current_questions = paginate_questions(request, selection)
+      try:
+        selection = Question.query.filter(Question.question.ilike("%" + search_term + "%")).order_by(Question.id).all()
+        total_questions = len(selection)
+        current_questions = paginate_questions(request, selection)
 
-      # categories
-      categories = Category.query.order_by(Category.id).all()
-      dict_categories = {}
-      for category in categories:
-        dict_categories[category.id] = category.type
+        # categories
+        categories = Category.query.order_by(Category.id).all()
+        dict_categories = {}
+        for category in categories:
+          dict_categories[category.id] = category.type
 
-      if (len(current_questions) == 0):
-        abort(404)
+        if (len(current_questions) == 0):
+          abort(404)
 
-      return jsonify({
-        'success': True,
-        'questions': current_questions,
-        'total_questions': total_questions,
-        'categories': dict_categories,
-        'current_category': None
-      })
+        return jsonify({
+          'success': True,
+          'questions': current_questions,
+          'total_questions': total_questions,
+          'categories': dict_categories,
+          'current_category': None
+        })
+
+      except:
+        abort(422)
 
   '''
   @TODO: 
@@ -227,7 +230,35 @@ def create_app(test_config=None):
   categories in the left column will cause only questions of that 
   category to be shown. 
   '''
+  @app.route('/categories/<int:id>/questions')
+  def retrieve_questions_by_category(id):
 
+    # categories
+    categories = Category.query.order_by(Category.id).all()
+    dict_categories = {}
+    for category in categories:
+      dict_categories[category.id] = category.type
+    if dict_categories.get(id, None) is None:
+      abort(404)
+
+    try:
+      # questions
+      selection = Question.query.filter(Question.category == id).order_by(Question.id).all()
+      total_questions = len(selection)
+      current_questions = paginate_questions(request, selection)
+
+      # if (len(current_questions) == 0):
+      #   abort(404)
+
+      return jsonify({
+        'success': True,
+        'questions': current_questions,
+        'total_questions': total_questions,
+        'categories': dict_categories,
+        'current_category': id
+      })
+    except:
+      abort(422)
 
   '''
   @TODO: 
@@ -240,11 +271,56 @@ def create_app(test_config=None):
   one question at a time is displayed, the user is allowed to answer
   and shown whether they were correct or not. 
   '''
+  @app.route('/quizzes', methods=['POST'])
+  def retrieve_quizzes():
+    body = request.get_json()
+    previous_questions = body.get('previous_questions', None)
+    quiz_category = body.get('quiz_category', None)
+    
+    if previous_questions is None or quiz_category is quiz_category is None:
+      abort(422)
+
+    questions = Question.query.filter(Question.category == quiz_category['id']).order_by(Question.id).all()
+
+    question = None
+
+    while len(questions) > 0:
+      question = random.choice(questions)
+      if question.id in previous_questions:
+        questions.remove(question)
+        question = None
+      else:
+        break
+
+    if question is not None:
+      formatted_question = question.format()
+    else:
+      formatted_question = None
+    return jsonify({
+      'success': True,
+      'question': formatted_question
+    })
 
   '''
   @TODO: 
   Create error handlers for all expected errors 
   including 404 and 422. 
   '''
+
+  @app.errorhandler(404)
+  def not_found(error):
+    return jsonify({
+      "success": False,
+      "error": 404,
+      "message": "resource not found"
+    }), 404
+
+  @app.errorhandler(422)
+  def unprocessable(error):
+    return jsonify({
+      "success": False,
+      "error": 422,
+      "message": "unprocessable"
+    }), 422
   
   return app
