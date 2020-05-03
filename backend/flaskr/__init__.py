@@ -70,6 +70,7 @@ def create_app(test_config=None):
         '''
         # questions
         selection = Question.query.order_by(Question.id).all()
+        print(selection)
         total_questions = len(selection)
         current_questions = paginate_questions(request, selection)
 

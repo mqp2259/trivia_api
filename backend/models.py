@@ -29,7 +29,7 @@ Question
 
 
 class Question(db.Model):
-    tablename__ = 'questions'
+    __tablename__ = 'questions'
 
     id = Column(Integer, primary_key=True)
     question = Column(String)
