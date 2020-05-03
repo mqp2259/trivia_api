@@ -4,6 +4,7 @@
     <list default="true" id="89a4eba7-ea6d-4f0d-a3e5-7135c0de079b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flaskr/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flaskr/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_flaskr.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_flaskr.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +26,29 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="pytest in test_flaskr.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_flaskr.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.pytest in test_flaskr.py" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -48,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588374015307</updated>
-      <workItem from="1588374020555" duration="15556000" />
+      <workItem from="1588374020555" duration="42658000" />
     </task>
     <servers />
   </component>
@@ -56,10 +80,46 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1588486795382">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.824@0.0.1536.824" timestamp="1588486795382" />
     <state x="544" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588374086634">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="544" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1588374086634" />
+    <state width="1493" height="195" key="GridCell.Tab.0.bottom" timestamp="1588527133388">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588527133388" />
+    <state width="1493" height="195" key="GridCell.Tab.0.center" timestamp="1588527133388">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588527133388" />
+    <state width="1493" height="195" key="GridCell.Tab.0.left" timestamp="1588527133388">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588527133388" />
+    <state width="1493" height="195" key="GridCell.Tab.0.right" timestamp="1588527133388">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588527133388" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1588527103582">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588527103582" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1588527103582">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1588527103582" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1588527103582">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1588527103582" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1588527103582">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1588527103582" />
     <state x="277" y="54" key="SettingsEditor" timestamp="1588374104674">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -68,5 +128,32 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1588394619120" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1588527179091">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588527179091" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/flaskr/__init__.py</url>
+          <line>184</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="tests">
+        <watch expression="Question.query.filter(Question.category == quiz_category['id']).order_by(Question.id).all()" language="Python" />
+        <watch expression="Question.query.filter(Question.question.ilike(&quot;%&quot; + search_term + &quot;%&quot;))" language="Python" />
+        <watch expression="Question.query.filter(Question.question.ilike(&quot;%&quot; + search_term + &quot;%&quot;)).all()" language="Python" />
+        <watch expression="Question.query.filter(Question.question.ilike(&quot;%&quot; + &quot;Tom&quot; + &quot;%&quot;))" language="Python" />
+        <watch expression="Question.query.filter(Question.question.ilike(&quot;%&quot; + &quot;Tom&quot; + &quot;%&quot;)).all()" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/backend$pytest_in_test_flaskr_py.coverage" NAME="pytest in test_flaskr.py Coverage Results" MODIFIED="1588527189893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
