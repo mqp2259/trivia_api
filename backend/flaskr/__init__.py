@@ -255,7 +255,10 @@ def create_app(test_config=None):
             abort(422)
 
         try:
-            questions = Question.query.filter(Question.category == quiz_category['id']).order_by(Question.id).all()
+            if quiz_category['id'] == 0:
+                questions = Question.query.order_by(Question.id).all()
+            else:
+                questions = Question.query.filter(Question.category == quiz_category['id']).order_by(Question.id).all()
         except:
             abort(422)
 
